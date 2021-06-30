@@ -3,7 +3,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 // SCREENS IMPORT
-import ExampleScreen from './screens/ExampleScreen';
+import ExampleScreen from '@screens/ExampleScreen';
 
 const Stack = createStackNavigator();
 function AppNavigaitor() {
