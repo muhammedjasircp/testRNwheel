@@ -17,8 +17,8 @@
     }
   },
   "lint-staged": {
-    "app/**/*.{js,es6,jsx,md}": [
-      "./node_modules/prettier/bin-prettier.js --trailing-comma --single-quote es5 --write",
+    "src/**/*.{js,es6,jsx,md}": [
+      "./node_modules/prettier/bin-prettier.js --single-quote es5 --write",
       "prettier --write",
       "eslint --fix",
       "eslint"
