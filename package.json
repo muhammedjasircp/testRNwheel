@@ -7,15 +7,21 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "app/**/*.{js,es6,jsx,md}": [
       "./node_modules/prettier/bin-prettier.js --trailing-comma --single-quote es5 --write",
       "prettier --write",
       "eslint --fix",
-      "eslint",
-      "git add"
+      "eslint"
     ]
   },
   "dependencies": {
