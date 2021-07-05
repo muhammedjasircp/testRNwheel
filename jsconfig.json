@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@redux/*": ["./src/redux/*"],
-      "@screens/*": ["./src/screens/*"]
+      "@redux/*": ["src/redux/*"],
+      "@screens/*": ["src/screens/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
