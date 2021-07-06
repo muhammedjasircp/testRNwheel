@@ -1,24 +1,24 @@
-react-native-template-wheel
-This repo contains code for the mobile application setup.
+# react-native-template-wheel
+## This repo contains code for the mobile application setup.
 
-Installation
+### Installation
 yarn install
-Extra installation steps for iOS
-Install cocoapods using gem install cocoapods
+#### Extra installation steps for iOS
+- Install cocoapods using `gem install cocoapods`
 
-cd ios && pod install
-Running
-yarn ios:dev # or yarn android:dev # for development
+- cd ios && pod install
+#### Running
+- yarn ios:dev # or yarn android:dev # for development
 
-yarn ios:staging # or yarn android:staging # for staging
+- yarn ios:staging # or yarn android:staging # for staging
 
-yarn ios:prod # yarn android:prod # for production
+- yarn ios:prod # yarn android:prod # for production
 
-Opening project in xcode
-To run from xcode, select ./ios/wheel.xcworkspace from finder
+### Opening project in xcode
+- To run from xcode, select ./ios/wheel.xcworkspace from finder
 
-Creating a debug-apk
-yarn android:dev-release # for dev data.
-yarn android:staging-release # for staging release
+### Creating a debug-apk
+- yarn android:dev-release # for dev data.
+- yarn android:staging-release # for staging release
 
-Then, you will get the apk inside this folder android/app/build/outputs/apk/debug.
+#### Then, you will get the apk inside this folder android/app/build/outputs/apk/debug.
