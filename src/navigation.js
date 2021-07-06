@@ -1,12 +1,10 @@
-// LIBRARIES
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
-// SCREENS IMPORT
-import ExampleScreen from './screens/ExampleScreen';
+import ExampleScreen from '@screens/ExampleScreen';
 
 const Stack = createStackNavigator();
-function AppNavigaitor() {
+function AppNavigator() {
   return (
     <Stack.Navigator
       headerMode="none"
@@ -19,4 +17,4 @@ function AppNavigaitor() {
   );
 }
 
-export default AppNavigaitor;
+export default AppNavigator;
