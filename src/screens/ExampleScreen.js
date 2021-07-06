@@ -1,18 +1,19 @@
 // LIBRARIES
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {connect, useDispatch} from 'react-redux';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
-const ExampleScreen = ({counter}) => {
+const ExampleScreen = () => {
   const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter);
   return (
     <View style={styles.container}>
       <View style={styles.btnWrapper}>
-        <TouchableOpacity onPress={() => dispatch({type: 'INCREMENT'})} style={styles.btn}>
+        <TouchableOpacity onPress={() => dispatch({ type: 'INCREMENT' })} style={styles.btn}>
           <Text style={styles.text}>Increment</Text>
         </TouchableOpacity>
         <Text>{counter}</Text>
-        <TouchableOpacity onPress={() => dispatch({type: 'DECREMENT'})} style={styles.btn}>
+        <TouchableOpacity onPress={() => dispatch({ type: 'DECREMENT' })} style={styles.btn}>
           <Text style={styles.text}>Decrement</Text>
         </TouchableOpacity>
       </View>
@@ -42,10 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = (state) => {
-  return {
-    counter: state.counter,
-  };
-};
-
-export default connect(mapStateToProps)(ExampleScreen);
+export default ExampleScreen;
