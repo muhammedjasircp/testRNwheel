@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
