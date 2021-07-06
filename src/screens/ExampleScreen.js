@@ -28,7 +28,7 @@ const ExampleScreen = () => {
         <View style={styles.headerText}>
           <Text>AsyncStorage debugging test</Text>
         </View>
-        <View style={{ borderWidth: 1, borderColor: 'black' }}>
+        <View style={styles.border}>
           <TextInput onChangeText={(text) => setName(text)} style={styles.textInput} value={name} />
         </View>
         <TouchableOpacity onPress={() => storeData('name', name)} style={styles.btn}>
@@ -38,7 +38,6 @@ const ExampleScreen = () => {
         <TouchableOpacity
           onPress={() => {
             getData('name').then((res) => {
-              console.log(res, 'fetched name from async store');
               setUpdatedName(res);
             });
           }}
@@ -76,6 +75,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   textInput: { padding: 0, margin: 0, width: 200, color: 'black' },
+  border: { borderWidth: 1, borderColor: 'black' },
 });
 
 export default ExampleScreen;

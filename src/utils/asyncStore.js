@@ -3,7 +3,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 RNAsyncStorageFlipper(AsyncStorage);
 const storeData = async (key, value) => {
-  console.log(key, value, 'async store setddata');
   try {
     await AsyncStorage.setItem(key, JSON.stringify(value));
   } catch (e) {
