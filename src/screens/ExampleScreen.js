@@ -1,13 +1,46 @@
 // LIBRARIES
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ExampleScreen = () => {
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter);
   return (
-    <View style={{backgroundColor: '#ccc', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Hello</Text>
+    <View style={styles.container}>
+      <View style={styles.btnWrapper}>
+        <TouchableOpacity onPress={() => dispatch({ type: 'INCREMENT' })} style={styles.btn}>
+          <Text style={styles.text}>Increment</Text>
+        </TouchableOpacity>
+        <Text>{counter}</Text>
+        <TouchableOpacity onPress={() => dispatch({ type: 'DECREMENT' })} style={styles.btn}>
+          <Text style={styles.text}>Decrement</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#ccc',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  btnWrapper: {
+    height: '15%',
+    width: '60%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  btn: {
+    backgroundColor: 'dodgerblue',
+    padding: 10,
+  },
+  text: {
+    color: '#fff',
+  },
+});
 
 export default ExampleScreen;
