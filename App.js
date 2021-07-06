@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Provider} from 'react-redux';
-import Store, {Persistor} from 'src/store';
-import {PersistGate} from 'redux-persist/integration/react';
-import AppNavigaitor from './src/navigation';
+import React, { useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
+import Store, { Persistor } from 'src/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import AppNavigatior from './src/navigation';
 
 const App = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const App = () => {
       <Provider store={Store}>
         <PersistGate loading={null} persistor={Persistor}>
           <NavigationContainer>
-            <AppNavigaitor />
+            <AppNavigatior />
           </NavigationContainer>
         </PersistGate>
       </Provider>
