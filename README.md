@@ -24,7 +24,7 @@ yarn
 5. Install iOS dependencies.
 
 ```bash
-  cd ios && pod install
+  yarn pod-install
 ```
 
 ## Running the app
