@@ -1,5 +1,5 @@
 # react-native-template-wheel
-
+This project serves as a base template to bootstrap a React Native application.
 ## Development Setup
 
 1. Configure your machine for React Native development by following the [official documentation](https://reactnative.dev/docs/environment-setup).
@@ -24,7 +24,7 @@ yarn
 5. Install iOS dependencies.
 
 ```bash
-  cd ios && pod install
+  yarn pod-install
 ```
 
 ## Running the app
