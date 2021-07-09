@@ -27,6 +27,30 @@ yarn
   yarn pod-install
 ```
 
+## Axios Configuration :
+
+### Setting default baseUrl :
+1. The baseUrl can be defined in `src/api/axiosConfig.js`.
+```Javascript
+export const configureAxios = () => {
+  axios.defaults.baseURL = `${constants.BASE_URL}`;
+  registerResponseIntercept();
+};
+```
+### Setting custom headers :
+1. To set custom axios headers, first, we need to import `configureAxiosHeaders` from `src/api/axiosConfig.js` to the file where we want to set the headers.
+```Javascript
+export const configureAxiosHeaders = (auth_token, email) => {
+  axios.defaults.headers['auth-token'] = auth_token;
+  axios.defaults.headers['auth-email'] = email;
+};
+```
+And call it on successful authentication of the user.
+```Javascript
+configureAxiosHeaders(auth_token, email);
+```
+The `configureAxiosHeaders` function can be modified as per our requirements.
+
 ## Running the app
 
 1. To run the Android or iOS version of the app.
