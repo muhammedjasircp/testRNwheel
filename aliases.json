@@ -1,4 +1,6 @@
 {
+  "@api": "./src/api",
+  "@constants": "./src/config/constants",
   "@src": "./src",
   "@redux": "./src/redux",
   "@screens": "./src/screens",

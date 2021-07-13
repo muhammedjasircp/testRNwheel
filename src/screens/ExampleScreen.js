@@ -13,7 +13,7 @@ const ExampleScreen = () => {
     <View style={styles.container}>
       <View style={styles.btnWrapper}>
         <View style={styles.headerText}>
-          <Text>Redux Debbuging test</Text>
+          <Text>Redux Debugging test</Text>
         </View>
         <TouchableOpacity onPress={() => dispatch({ type: 'INCREMENT' })} style={styles.btn}>
           <Text style={styles.text}>Increment</Text>
