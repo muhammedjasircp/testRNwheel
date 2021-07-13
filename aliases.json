@@ -3,5 +3,6 @@
   "@constants": "./src/config/constants",
   "@src": "./src",
   "@redux": "./src/redux",
-  "@screens": "./src/screens"
+  "@screens": "./src/screens",
+  "@utils": "./src/utils"
 }

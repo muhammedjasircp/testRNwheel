@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { storeData, getData } from '../utils/asyncStore';
+import { storeData, getData } from '@utils/asyncStore';
 
 const ExampleScreen = () => {
   const dispatch = useDispatch();
@@ -35,10 +35,13 @@ const ExampleScreen = () => {
         </TouchableOpacity>
         <Text>{updatedName ? updatedName : null}</Text>
         <TouchableOpacity
-          onPress={() => {
-            getData('name').then((res) => {
+          onPress={async () => {
+            try {
+              const res = await getData('name');
               setUpdatedName(res);
-            });
+            } catch (err) {
+              return err;
+            }
           }}
           style={styles.btn}>
           <Text style={styles.text}>GET</Text>

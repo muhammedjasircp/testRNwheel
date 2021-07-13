@@ -2,11 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@api": ["src/api/*"],
-      "@constants": ["src/config/constants"],
-      "@src": ["src/*"],
-      "@redux/*": ["src/redux/*"],
-      "@screens/*": ["src/screens/*"]
+      "@api": ["./src/api/*"],
+      "@constants": ["./src/config/constants"],
+      "@redux/*": ["./src/redux/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@src": ["./src/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "exclude": ["node_modules", "dist"]
