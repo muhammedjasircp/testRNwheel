@@ -2,7 +2,7 @@
   "name": "react-native-template-wheel",
   "version": "0.0.1",
   "description": "React Native Template Wheel",
-  "repository": "https://github.com/bigbinary/react-native-template-wheel/tree/25-project-template-setup.git",
+  "repository": "git@github.com:muhammedjasircp/testRNwheel.git",
   "author": "",
   "license": "MIT"
 }
