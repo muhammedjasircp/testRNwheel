@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import * as Sentry from '@sentry/react-native';
 import { storeData, getData } from '@utils/asyncStore';
 
 const ExampleScreen = () => {
@@ -80,4 +81,4 @@ const styles = StyleSheet.create({
   border: { borderWidth: 1, borderColor: 'black' },
 });
 
-export default ExampleScreen;
+export default Sentry.withProfiler(ExampleScreen);

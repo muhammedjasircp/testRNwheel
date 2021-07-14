@@ -36,6 +36,8 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
+    "@sentry/react-native": "^2.6.0",
+    "@sentry/tracing": "^6.8.0",
     "axios": "^0.21.1",
     "husky": "^7.0.0",
     "jest": "^27.0.6",

@@ -2,11 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@api": ["./src/api/*"],
-      "@constants": ["./src/config/constants"],
+      "@api/*": ["./src/api/*"],
+      "@constants/*": ["./src/config/constants/*"],
       "@redux/*": ["./src/redux/*"],
       "@screens/*": ["./src/screens/*"],
-      "@src": ["./src/*"],
+      "@src/*": ["./src/*"],
       "@utils/*": ["./src/utils/*"],
     }
   },
